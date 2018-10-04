@@ -1,0 +1,5 @@
+casus.stomp:
+  connect:
+    path: /casus-sample
+  topic:
+    prefix: /queue

@@ -1,0 +1,15 @@
+allprojects {
+    wrapper {
+        gradleVersion = "4.6"
+    }
+}
+
+subprojects {
+    apply plugin:'java'
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        testImplementation 'org.mockito:mockito-all:1.10.19'
+    }
+}

@@ -1,0 +1,16 @@
+group 'com.apexmob.casus'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.7
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation "com.fasterxml.jackson.core:jackson-databind:2.9.6"
+
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}

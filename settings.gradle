@@ -1,0 +1,10 @@
+rootProject.name = 'casus'
+include 'casus-engine'
+include 'casus-client'
+include 'casus-sample-websocket-server'
+include 'casus-sample-websocket-client'
+include 'casus-sample'
+include 'casus-websocket-client'
+include 'casus-websocket-server'
+include 'casus-data'
+
