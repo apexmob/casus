@@ -1,8 +1,8 @@
 package com.apexmob.casus.attribute;
 
 import com.apexmob.casus.AbstractGameObjectAttribute;
-import com.apexmob.casus.attribute.event.SimpleObjectAddedEvent;
-import com.apexmob.casus.attribute.event.SimpleObjectRemovedEvent;
+import com.apexmob.casus.attribute.event.ObjectListChangedEvent;
+import com.apexmob.casus.attribute.event.SimpleObjectListChangedEvent;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -36,7 +36,7 @@ public class SimpleObjectListHolder<T> extends AbstractGameObjectAttribute imple
         boolean retVal = objects.remove(obj);
         if (retVal) {
             for (ObjectListChangeListener listener : listeners) {
-                listener.onObjectRemoved(new SimpleObjectRemovedEvent(getGameObject(), obj));
+                listener.onChange(new SimpleObjectListChangedEvent(getGameObject(), obj, ObjectListChangedEvent.ChangeType.REMOVAL));
             }
         }
 
@@ -51,7 +51,7 @@ public class SimpleObjectListHolder<T> extends AbstractGameObjectAttribute imple
         boolean retVal = objects.add(obj);
         if (retVal) {
             for (ObjectListChangeListener listener : listeners) {
-                listener.onObjectAdded(new SimpleObjectAddedEvent(getGameObject(), obj));
+                listener.onChange(new SimpleObjectListChangedEvent(getGameObject(), obj, ObjectListChangedEvent.ChangeType.ADDITION));
             }
         }
         return retVal;

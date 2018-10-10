@@ -1,11 +1,9 @@
 package com.apexmob.casus.attribute;
 
-import com.apexmob.casus.attribute.event.ObjectAddedEvent;
-import com.apexmob.casus.attribute.event.ObjectRemovedEvent;
+import com.apexmob.casus.attribute.event.ObjectListChangedEvent;
 
 public interface ObjectListChangeListener<T> {
 
-    void onObjectAdded(ObjectAddedEvent<T> event);
+    void onChange(ObjectListChangedEvent<T> event);
 
-    void onObjectRemoved(ObjectRemovedEvent<T> event);
 }
