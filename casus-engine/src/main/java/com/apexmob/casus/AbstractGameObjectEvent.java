@@ -2,7 +2,8 @@ package com.apexmob.casus;
 
 /**
  * AbstractGameObjectEvent is an abstract implementation of the {@link GameObjectEvent} interface that provides
- * standard {@link GameObjectEvent} that will be necessary across all {@link GameObjectEvent} implementations.
+ * standard {@link GameObjectEvent} functionality that will be necessary across all {@link GameObjectEvent}
+ * implementations.
  *
  * @author Chris Kirk
  * @since 1.0
