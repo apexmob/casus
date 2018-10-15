@@ -5,6 +5,8 @@ import com.apexmob.casus.GameObject;
 import com.apexmob.casus.location.Location;
 
 /**
+ * SimpleLocatable provides a simple implementation of {@link Locatable}.
+ *
  * @author Chris Kirk
  * @since 1.0
  */
@@ -12,11 +14,17 @@ public class SimpleLocatable extends AbstractGameObjectAttribute<GameObject> imp
 
     private Location location;
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public Location getLocation() {
         return location;
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public void setLocation(Location location) {
         this.location = location;
